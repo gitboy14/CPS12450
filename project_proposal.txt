@@ -1,0 +1,15 @@
+In order to deal with numbers of course information, this project will use the text that copy from keanwise as input, and print name and period individually in console.
+
+e.g.
+  input: 
+  "Spring 2021 Wenzhou  CPS*2231*W05 (97017) COMPUTER ORGAN & PROGRAMMING WENZHOU-KEAN UNIVERSITY  02/22/2021-06/08/2021 Lecture Tuesday, Thursday 11:30AM - 01:15PM, Room to be Announced  To be Announced  8 / 20  4.00  Spring 2021 Wenzhou  CPS*2231*W06 (97018) COMPUTER ORGAN & PROGRAMMING WENZHOU-KEAN UNIVERSITY  02/22/2021-06/08/2021 Lecture Tuesday, Thursday 04:00PM - 05:45PM, Room to be Announced  To be Announced  -1 / 20  4.00  Spring 2021 Wenzhou  CPS*2231*W07 (97019) COMPUTER ORGAN & PROGRAMMING WENZHOU-KEAN UNIVERSITY  02/22/2021-06/08/2021 Lecture Tuesday, Thursday 08:30AM - 10:15AM, Room to be Announced  To be Announced  15 / 20  4.00"
+
+  output: 
+  "CPS*2231*W05
+  Lecture Tuesday, Thursday 11:30AM - 01:15PM,
+  CPS*2231*W06
+  Lecture Tuesday, Thursday 04:00PM - 05:45PM,
+  CPS*2231*W07
+  Lecture Tuesday, Thursday 08:30AM - 10:15AM,"
+  
+This project will use regex to match name and period, then store them as a double-dimensional array to print them later.
