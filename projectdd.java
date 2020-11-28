@@ -25,15 +25,15 @@ public class Tool {
 	public static String[][] format(String t) {
 		
 		String[][] courses = new String[10][2];
-		//HERE IS THE DOUBLE-DIMESIONAL ARRAY !!!
+		//HERE IS THE DOUBLE-DIMENSIONAL ARRAY !!!
 		
 		Pattern name = Pattern.compile(".{8}\\*W..");
-		Pattern section = Pattern.compile("Lecture[\\s\\S]+?M\\,");
+		Pattern period = Pattern.compile("Lecture[\\s\\S]+?M\\,");
 		//"CPS*2231*W04"
 		//"Lecture Monday, Thursday 04:00PM - 06:45PM"
 		
 		Matcher mName = name.matcher(t);
-		Matcher mSection = section.matcher(t);
+		Matcher mPeriod = period.matcher(t);
 		
 		int i = 0;		
 		while (mName.find()) {						
@@ -42,8 +42,8 @@ public class Tool {
 		}
 		
 		int j = 0;
-		while (mSection.find()) {						
-			courses[j][1] = mSection.group();
+		while (mPeriod.find()) {						
+			courses[j][1] = mPeriod.group();
 			j++;
 		}
 		
