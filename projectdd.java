@@ -15,7 +15,7 @@ public class Projectdd {
 		String text = input.nextLine();
 		
 		String[][] matrix = getMatrix(text);
-		print(matrix);
+		printMatrix(matrix);
 	}
 
 
@@ -32,22 +32,16 @@ public class Projectdd {
 		Matcher mName = name.matcher(t);
 		Matcher mPeriod = period.matcher(t);
 		
-		int i = 0;		
-		while (mName.find()) {						
+		for (int i = 0;mName.find();i++)						
 			m[i][0] = mName.group();
-			i++;
-		}
 		
-		int j = 0;
-		while (mPeriod.find()) {						
-			m[j][1] = mPeriod.group();
-			j++;
-		}
+		for (int i = 0;mPeriod.find();i++)						
+			m[i][1] = mPeriod.group();
 		
 		return m;
 	}
 	
-	public static void print(String[][] m) {
+	public static void printMatrix(String[][] m) {
 		
 		for(int i = 0; m[i][0] != null; i++) {
 			System.out.println(m[i][0]);
